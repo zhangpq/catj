@@ -1,8 +1,13 @@
 package com.catj.service.impl;
 
+import com.catj.dao.UserDao;
+import com.catj.model.User;
 import com.catj.service.UserService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * LY.com.Inc
@@ -14,12 +19,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserServiceImpl implements UserService {
     @Value("${server.port}")
-
     private String port;
+
+    @Resource
+    private UserDao userDao;
 
     public String testUser(){
 
         return "i am hqa,current port is : " + port;
+    }
+
+    @RequestMapping("addUser")
+    public User addUser(){
+        User user = new User();
+        user.setAge(12);
+        user.setName("zk");
+        userDao.save(user);
+        return user;
     }
 
 }
