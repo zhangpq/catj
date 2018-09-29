@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="catj-core" />
+        <module name="catj-eureka-server" />
+        <module name="catj-user-fegin" />
+        <module name="catj-user-service" />
+        <module name="catj-zuul-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="catj-core" target="1.8" />
+      <module name="catj-eureka-server" target="1.8" />
+      <module name="catj-fegin" target="1.8" />
+      <module name="catj-fegin-client" target="1.8" />
+      <module name="catj-parent" target="1.8" />
+      <module name="catj-user-fegin" target="1.8" />
+      <module name="catj-user-service" target="1.8" />
+      <module name="catj-zuul-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
