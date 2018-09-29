@@ -1,8 +1,7 @@
-package com.catj.com.catj.service.impl;
+package com.catj.service.impl;
 
 import com.catj.service.UserService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,8 +18,6 @@ public class UserServiceImpl implements UserService {
     private String port;
 
     public String testUser(){
-
-        int x = 1/0;
 
         return "i am hqa,current port is : " + port;
     }
