@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/catj-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/catj-zuul-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/catj-config-center/pom.xml" />
+        <option value="$PROJECT_DIR$/catj-zipkin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

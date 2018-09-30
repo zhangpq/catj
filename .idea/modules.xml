@@ -3,12 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/catj-config-center/catj-config-center.iml" filepath="$PROJECT_DIR$/catj-config-center/catj-config-center.iml" />
+      <module fileurl="file://C:\Users\Administrator\IdeaProjects\catj\catj-config-center\catj-config-center.iml" filepath="C:\Users\Administrator\IdeaProjects\catj\catj-config-center\catj-config-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-core/catj-core.iml" filepath="$PROJECT_DIR$/catj-core/catj-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" filepath="$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-fegin.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-parent.iml" filepath="$PROJECT_DIR$/catj-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-user-fegin/catj-user-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-user-fegin/catj-user-fegin.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-user-service/catj-user-service.iml" filepath="$PROJECT_DIR$/catj-user-service/catj-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catj-zipkin/catj-zipkin.iml" filepath="$PROJECT_DIR$/catj-zipkin/catj-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-zuul-gateway/catj-zuul-gateway.iml" filepath="$PROJECT_DIR$/catj-zuul-gateway/catj-zuul-gateway.iml" />
     </modules>
   </component>

@@ -11,6 +11,7 @@
         <module name="catj-eureka-server" />
         <module name="catj-user-fegin" />
         <module name="catj-user-service" />
+        <module name="catj-zipkin" />
         <module name="catj-zuul-gateway" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="catj-parent" target="1.8" />
       <module name="catj-user-fegin" target="1.8" />
       <module name="catj-user-service" target="1.8" />
+      <module name="catj-zipkin" target="1.8" />
       <module name="catj-zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
