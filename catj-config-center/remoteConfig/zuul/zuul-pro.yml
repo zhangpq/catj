@@ -12,7 +12,7 @@ spring:
   sleuth:
     sampler:
       percentage: 1
-    zipkin:
+  zipkin:
       base-url: http://localhost:7740
 
 zuul:
