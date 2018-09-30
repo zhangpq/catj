@@ -9,6 +9,11 @@ server:
 spring:
   application:
     name: catj-zuul
+  sleuth:
+    sampler:
+      percentage: 1
+    zipkin:
+      base-url: http://localhost:7740
 
 zuul:
   routes:
