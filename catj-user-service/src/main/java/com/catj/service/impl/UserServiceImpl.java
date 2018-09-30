@@ -21,12 +21,15 @@ public class UserServiceImpl implements UserService {
     @Value("${server.port}")
     private String port;
 
+    @Value("${foo}")
+    private String foo;
+
     @Resource
     private UserDao userDao;
 
     public String testUser(){
 
-        return "i am hqa,current port is : " + port;
+        return "i am hqa,current port is : " + port + ",the foo is :" + foo;
     }
 
     @RequestMapping("addUser")

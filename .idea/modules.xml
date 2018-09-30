@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/catj-config-center/catj-config-center.iml" filepath="$PROJECT_DIR$/catj-config-center/catj-config-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-core/catj-core.iml" filepath="$PROJECT_DIR$/catj-core/catj-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" filepath="$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-fegin.iml" />
