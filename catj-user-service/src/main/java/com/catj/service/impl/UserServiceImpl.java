@@ -3,6 +3,8 @@ package com.catj.service.impl;
 import com.catj.dao.UserDao;
 import com.catj.model.User;
 import com.catj.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +29,12 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+    Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     public String testUser(){
+
+        logger.info("哈哈~~日志配置成功啦！");
+        logger.debug("哈哈~~日志配置成功啦！");
 
         return "i am hqa,current port is : " + port + ",the foo is :" + foo;
     }

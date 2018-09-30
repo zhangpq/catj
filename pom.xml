@@ -30,6 +30,15 @@
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+        <groupId>net.logstash.logback</groupId>
+        <artifactId>logstash-logback-encoder</artifactId>
+        <version>5.2</version>
+    </dependency>
+
+</dependencies>
+
 
     <dependencyManagement>
         <dependencies>
