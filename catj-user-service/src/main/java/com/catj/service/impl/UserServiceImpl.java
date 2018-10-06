@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -45,8 +46,8 @@ public class UserServiceImpl implements UserService {
     @RequestMapping("addUser")
     public User addUser(){
         User user = new User();
-        user.setAge(12);
-        user.setName("zk");
+        user.setLastLoginTime(new Date());
+        user.setUsername("zk");
         userDao.save(user);
         return user;
     }

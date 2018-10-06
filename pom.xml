@@ -20,6 +20,7 @@
         <module>catj-user-service</module>
         <module>catj-zuul-gateway</module>
         <module>catj-fegin</module>
+        <module>catj-cas</module>
     </modules>
     <packaging>pom</packaging>
 

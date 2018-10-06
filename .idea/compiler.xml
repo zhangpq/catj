@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="catj-cas" />
         <module name="catj-config-center" />
         <module name="catj-core" />
         <module name="catj-eureka-server" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="catj-cas" target="1.8" />
       <module name="catj-config-center" target="1.8" />
       <module name="catj-core" target="1.8" />
       <module name="catj-eureka-server" target="1.8" />
