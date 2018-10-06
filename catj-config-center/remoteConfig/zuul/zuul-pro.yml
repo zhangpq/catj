@@ -20,3 +20,6 @@ zuul:
     user:
       path: /api-user/**
       service-id: user-service
+    cas:
+      path: /api-cas/**
+      service-id: catj-cas

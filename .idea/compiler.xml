@@ -12,7 +12,6 @@
         <module name="catj-core" />
         <module name="catj-eureka-server" />
         <module name="catj-user-fegin" />
-        <module name="catj-user-fegin (1)" />
         <module name="catj-user-service" />
         <module name="catj-zipkin" />
         <module name="catj-zuul-gateway" />

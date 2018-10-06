@@ -21,6 +21,7 @@
         <module>catj-zuul-gateway</module>
         <module>catj-fegin</module>
         <module>catj-cas</module>
+        <module>catj-zipkin</module>
     </modules>
     <packaging>pom</packaging>
 

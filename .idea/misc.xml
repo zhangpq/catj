@@ -15,13 +15,6 @@
         <option value="$PROJECT_DIR$/catj-fegin/catj-cas-fegin/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/catj-fegin-client/pom.xml" />
-        <option value="$PROJECT_DIR$/catj-fegin/catj-cas-fegin/pom.xml" />
-        <option value="$PROJECT_DIR$/catj-fegin/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

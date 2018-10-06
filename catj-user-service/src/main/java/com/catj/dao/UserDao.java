@@ -9,28 +9,21 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao  extends JpaRepository<User, Long> {
 
-    /**
-     * 根据年纪查询用户
-     * @param age
-     * @return
-     */
-    User findByAge(Integer age);
 
     /**
      * 根据年纪和姓名查询
-     * @param name
-     * @param age
+     * @param username
      * @return
      */
-    User findByNameAndAge(String name, Integer age);
+    User findByUsername(String username);
 
     /**
      * 对于复杂查询可以使用@Query 编写sql
-     * @param name
+     * @param username
      * @return
      */
-    @Query("from User u where u.name=:name")
+    @Query("from User u where u.username=:username")
 
-    User findUser(@Param("name") String name);
+    User findUser(@Param("username") String username);
 
 }
