@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/catj-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-fegin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/catj-fegin/catj-cas-fegin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/catj-fegin/catj-cas-fegin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-fegin/catj-user-fegin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-zipkin" charset="UTF-8" />

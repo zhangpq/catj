@@ -12,11 +12,14 @@
         <option value="$PROJECT_DIR$/catj-zuul-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/catj-config-center/pom.xml" />
         <option value="$PROJECT_DIR$/catj-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/catj-fegin/catj-cas-fegin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/catj-fegin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/catj-fegin/catj-cas-fegin/pom.xml" />
+        <option value="$PROJECT_DIR$/catj-fegin/pom.xml" />
       </set>
     </option>
   </component>

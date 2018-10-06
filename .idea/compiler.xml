@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="catj-cas" />
+        <module name="catj-cas-fegin" />
         <module name="catj-config-center" />
         <module name="catj-core" />
         <module name="catj-eureka-server" />
         <module name="catj-user-fegin" />
+        <module name="catj-user-fegin (1)" />
         <module name="catj-user-service" />
         <module name="catj-zipkin" />
         <module name="catj-zuul-gateway" />
@@ -18,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="catj-cas" target="1.8" />
+      <module name="catj-cas-fegin" target="1.8" />
       <module name="catj-config-center" target="1.8" />
       <module name="catj-core" target="1.8" />
       <module name="catj-eureka-server" target="1.8" />
@@ -25,6 +28,7 @@
       <module name="catj-fegin-client" target="1.8" />
       <module name="catj-parent" target="1.8" />
       <module name="catj-user-fegin" target="1.8" />
+      <module name="catj-user-fegin (1)" target="1.8" />
       <module name="catj-user-service" target="1.8" />
       <module name="catj-zipkin" target="1.8" />
       <module name="catj-zuul-gateway" target="1.8" />

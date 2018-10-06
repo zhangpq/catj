@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>catj-user-fegin</module>
+        <module>catj-cas-fegin</module>
     </modules>
 
     <dependencies>
