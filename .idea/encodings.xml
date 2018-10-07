@@ -13,5 +13,6 @@
     <file url="file://$PROJECT_DIR$/catj-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catj-zuul-gateway" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
