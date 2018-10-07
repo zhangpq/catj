@@ -7,7 +7,7 @@ import com.catj.service.LoginService;
  */
 public class CasHystrix implements LoginService {
     @Override
-    public String goLogin() {
+    public String goLogin(String name) {
         return "service fail!";
     }
 }
