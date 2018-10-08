@@ -17,12 +17,20 @@ public interface LoginService {
 
 
     /**
-     * 登录验证
+     * 去登录
      * @param userPhone
      * @param password
      * @return
      */
     @RequestMapping(value = "goLogin", produces = { "application/json;charset=UTF-8" })
     CatJResult goLogin(String userPhone, String password);
+
+    /**
+     * 退出登录
+     * @param authToken
+     * @return
+     */
+    @RequestMapping(value = "logout", produces = { "application/json;charset=UTF-8" })
+    CatJResult logout(String authToken);
 
 }

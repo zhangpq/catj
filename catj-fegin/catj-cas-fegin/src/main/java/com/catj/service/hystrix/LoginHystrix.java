@@ -12,4 +12,9 @@ public class LoginHystrix implements LoginService {
     public CatJResult goLogin(String userPhone, String password) {
         return null;
     }
+
+    @Override
+    public CatJResult logout(String authToken) {
+        return null;
+    }
 }
