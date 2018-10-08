@@ -2,6 +2,7 @@ package com.catj.service.impl;
 
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.json.JSONUtil;
+import com.catj.common.CatJAuth;
 import com.catj.common.CatJResult;
 import com.catj.constant.ModuleEnum;
 import com.catj.constant.SystemConstant;
@@ -47,7 +48,7 @@ public class LoginServiceImpl implements LoginService{
            if(user == null)return CatJResult.FAIL("登录失败,用户名或密码错误",null);
            //加入redis缓存
            String authToken = addUserToCache(user);
-           return CatJResult.OK("登录成功",authToken);
+           return CatJResult.OK("登录成功", CatJAuth.createAuth(authToken));
        }catch (Exception e){
            e.printStackTrace();
            logger.error("去登陆异常,userPhone：".concat(userPhone),e);
