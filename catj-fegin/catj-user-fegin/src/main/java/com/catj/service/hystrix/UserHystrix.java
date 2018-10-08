@@ -1,5 +1,6 @@
 package com.catj.service.hystrix;
 
+import com.catj.model.User;
 import com.catj.service.UserService;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,11 @@ public class UserHystrix  implements UserService{
     @Override
     public String testUser() {
 
-        return "no";
+        return "error";
+    }
+
+    @Override
+    public User findLoginUser(String userPhone, String password) {
+        return null;
     }
 }

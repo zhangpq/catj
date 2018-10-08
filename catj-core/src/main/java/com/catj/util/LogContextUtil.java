@@ -2,6 +2,8 @@ package com.catj.util;
 
 import org.slf4j.MDC;
 
+import java.util.UUID;
+
 /**
  * Created by Administrator on 2018/9/30.
  */
@@ -23,6 +25,12 @@ public class LogContextUtil {
         setModule(module);
         setCategory(category);
         setFilterChain(filter);
+    }
+
+    public static void setUuidContext(String module,String category){
+        setModule(module);
+        setCategory(category);
+        setFilterChain(UUID.randomUUID().toString());
     }
 
     public static void clear(){

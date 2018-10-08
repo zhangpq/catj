@@ -1,9 +1,13 @@
 package com.catj.service.impl;
 
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.digest.DigestUtil;
+import com.catj.constant.ModuleEnum;
 import com.catj.dao.UserDao;
 import com.catj.model.User;
 import com.catj.service.UserService;
 import com.catj.util.LogContextUtil;
+import org.apache.catalina.security.SecurityUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -12,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.security.Security;
 import java.util.Date;
 import java.util.UUID;
 
@@ -33,23 +38,44 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+
     Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    public String testUser(){
-        LogContextUtil.setContext("用户模块","测试用户", UUID.randomUUID().toString());
+    /**
+     * 测试方法
+     *
+     * @return
+     */
+    public String testUser() {
+        LogContextUtil.setUuidContext(ModuleEnum.USER_MODULE.getDesc(), "测试用户");
         logger.info("哈哈~~日志配置成功啦！");
         logger.error("测试失败啦！");
         LogContextUtil.clear();
         return "i am hqa,current port is : " + port + ",the foo is :" + foo;
     }
 
-    @RequestMapping("addUser")
-    public User addUser(){
-        User user = new User();
-        user.setLastLoginTime(new Date());
-        user.setUsername("zk");
-        userDao.save(user);
-        return user;
+    /**
+     * 查找登录用户
+     *
+     * @param userPhone
+     * @param password
+     * @return
+     */
+    @Override
+    public User findLoginUser(String userPhone, String password) {
+        LogContextUtil.setUuidContext(ModuleEnum.USER_MODULE.getDesc(), "查找登录用户");
+        try {
+            return userDao.findByUsernameAndUserPhone(userPhone, SecureUtil.md5(password));
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("查找登录用户异常,userPhone:".concat(userPhone), e);
+
+        } finally {
+            LogContextUtil.clear();
+        }
+
+        return null;
     }
+
 
 }

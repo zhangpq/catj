@@ -11,11 +11,13 @@ public interface UserDao  extends JpaRepository<User, Long> {
 
 
     /**
-     * 根据年纪和姓名查询
+     * 根据姓名查询
      * @param username
      * @return
      */
     User findByUsername(String username);
+
+    User findByUsernameAndUserPhone(String username,String userPhone);
 
     /**
      * 对于复杂查询可以使用@Query 编写sql

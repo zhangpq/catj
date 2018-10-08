@@ -1,6 +1,7 @@
 package com.catj.service;
 
-import com.catj.service.hystrix.CasHystrix;
+import com.catj.common.CatJResult;
+import com.catj.service.hystrix.LoginHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,11 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author mc.han
  * @version $Id:UserService,v 0.1 2018/9/29 15:00 mc.han Exp $
  **/
-@FeignClient(value = "catj-cas",fallback = CasHystrix.class)
+@FeignClient(value = "catj-cas",fallback = LoginHystrix.class)
 public interface LoginService {
 
 
+    /**
+     * 登录验证
+     * @param userPhone
+     * @param password
+     * @return
+     */
     @RequestMapping(value = "goLogin", produces = { "application/json;charset=UTF-8" })
-    String goLogin(String name);
+    CatJResult goLogin(String userPhone, String password);
 
 }
