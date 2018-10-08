@@ -4,6 +4,7 @@ import com.catj.model.User;
 import com.catj.service.hystrix.UserHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * LY.com.Inc
@@ -19,6 +20,6 @@ public interface UserService {
     String testUser();
 
     @RequestMapping(value = "findLoginUser", produces = { "application/json;charset=UTF-8" })
-    User findLoginUser(String userPhone,String password);
+    User findLoginUser(@RequestParam("userPhone") String userPhone,@RequestParam("password") String password);
 
 }

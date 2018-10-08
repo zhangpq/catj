@@ -9,8 +9,8 @@ import com.catj.model.User;
 import com.catj.service.LoginService;
 import com.catj.service.RedisService;
 import com.catj.service.UserService;
+import com.catj.util.DataUtils;
 import com.catj.util.LogContextUtil;
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,7 +42,8 @@ public class LoginServiceImpl implements LoginService{
     public CatJResult goLogin(String userPhone, String password) {
         LogContextUtil.setUuidContext(ModuleEnum.CAS_MODULE.getDesc(), "去登陆");
        try {
-           User user = userService.findLoginUser(userPhone, MD5Encoder.encode(password.getBytes()));
+           if(DataUtils.isEmpty(userPhone) || DataUtils.isEmpty(password))return CatJResult.paramError();
+           User user = userService.findLoginUser(userPhone, password);
            if(user == null)return CatJResult.FAIL("登录失败,用户名或密码错误",null);
            //加入redis缓存
            String authToken = addUserToCache(user);
@@ -50,10 +51,10 @@ public class LoginServiceImpl implements LoginService{
        }catch (Exception e){
            e.printStackTrace();
            logger.error("去登陆异常,userPhone：".concat(userPhone),e);
+           return CatJResult.FAIL("服务异常","500");
        }finally {
            LogContextUtil.clear();
        }
-        return CatJResult.FAIL("服务异常","500");
     }
 
 

@@ -3,6 +3,7 @@ package com.catj.service;
 import com.catj.service.hystrix.RedisHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * LY.com.Inc
@@ -15,11 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface RedisService {
 
     @RequestMapping(value = "setValue", produces = { "application/json;charset=UTF-8" })
-    void setValue(String key,String value);
+    void setValue(@RequestParam("key") String key,@RequestParam("value") String value);
 
 
     @RequestMapping(value = "setExpireValue", produces = { "application/json;charset=UTF-8" })
-    void setExpireValue(String key,String value,Long expireTime);
+    void setExpireValue(@RequestParam("key") String key,@RequestParam("value") String value,@RequestParam("expireTime") Long expireTime);
 
     @RequestMapping(value = "exists", produces = { "application/json;charset=UTF-8" })
     boolean exists(String key);
@@ -31,7 +32,7 @@ public interface RedisService {
     void remove(String key);
 
     @RequestMapping(value = "batchRemove", produces = { "application/json;charset=UTF-8" })
-    void batchRemove(String... keys);
+    void batchRemove(@RequestParam("keys") String... keys);
 
     @RequestMapping(value = "removePattern", produces = { "application/json;charset=UTF-8" })
     void removePattern(String pattern);

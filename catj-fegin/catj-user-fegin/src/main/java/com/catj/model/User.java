@@ -16,10 +16,10 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String username;
 
-    @Column
+    @Column(nullable = false)
     private String password;//MD5加密
 
     @Column(columnDefinition="int COMMENT '1.女 2.男 3.保密'")
@@ -37,7 +37,7 @@ public class User {
     @Column
     private String userFace;//用户头像
 
-    @Column
+    @Column (nullable = false)
     private String userPhone;//手机号码
 
     @Column

@@ -65,7 +65,8 @@ public class UserServiceImpl implements UserService {
     public User findLoginUser(String userPhone, String password) {
         LogContextUtil.setUuidContext(ModuleEnum.USER_MODULE.getDesc(), "查找登录用户");
         try {
-            return userDao.findByUsernameAndUserPhone(userPhone, SecureUtil.md5(password));
+            String md5Pass = SecureUtil.md5(password);
+            return userDao.findByUserPhoneAndPassword(userPhone, md5Pass);
         } catch (Exception e) {
             e.printStackTrace();
             logger.error("查找登录用户异常,userPhone:".concat(userPhone), e);

@@ -19,6 +19,8 @@ public class CatJResult {
 
     private final static String SUCCESS_CODE = "200";
 
+    private final static String PARAM_ERROR_CODE = "10004";
+
     public CatJResult(Boolean flag, String info, String code, Object data) {
         this.flag = flag;
         this.info = info;
@@ -85,5 +87,12 @@ public class CatJResult {
     }
 
 
+    /**
+     * 参数错误
+     * @return
+     */
+    public static CatJResult paramError() {
 
+        return FAIL("参数错误",PARAM_ERROR_CODE);
+    }
 }
