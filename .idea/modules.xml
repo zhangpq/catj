@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/catj-core/catj-core.iml" filepath="$PROJECT_DIR$/catj-core/catj-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" filepath="$PROJECT_DIR$/catj-eureka-server/catj-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-fegin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-midware-fegin/catj-midware-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-midware-fegin/catj-midware-fegin.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-midware-service/catj-midware-service.iml" filepath="$PROJECT_DIR$/catj-midware-service/catj-midware-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-parent.iml" filepath="$PROJECT_DIR$/catj-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/catj-fegin/catj-user-fegin/catj-user-fegin.iml" filepath="$PROJECT_DIR$/catj-fegin/catj-user-fegin/catj-user-fegin.iml" />

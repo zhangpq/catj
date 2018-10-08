@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface LoginService {
 
 
-    @RequestMapping(value = "login", produces = { "application/json;charset=UTF-8" })
+    @RequestMapping(value = "goLogin", produces = { "application/json;charset=UTF-8" })
     String goLogin(String name);
 
 }

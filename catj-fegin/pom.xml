@@ -9,11 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.catj</groupId>
     <artifactId>catj-fegin</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>catj-user-fegin</module>
         <module>catj-cas-fegin</module>
+        <module>catj-midware-fegin</module>
     </modules>
 
     <dependencies>
